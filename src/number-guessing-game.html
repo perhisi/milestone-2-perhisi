@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Guessing Game</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-400 to-purple-600 min-h-screen flex items-center justify-center p-4">
+  <div id="notification" class="fixed inset-0 bg-black flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+      <h2 class="text-xl font-bold mb-4">Game Instructions</h2>
+      <p class="text-gray-700 mb-6">Can you guess the number between 1 and 100 within a limited number of attempts?</p>
+      <p class="text-gray-700 mb-6">After each guess, you'll receive feedback to help you get closer to the correct
+        number.</p>
+      <p class="text-gray-700 mb-6">Good luck and have fun!</p>
+      <button id="closeNotification" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Continue
+      </button>
+    </div>
+  </div>
+  <div class="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full">
+    <!-- Game Title -->
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">
+      🎯 Number Guessing Game
+    </h1>
+
+    <!-- Game Instructions -->
+    <p class="text-center text-gray-600 mb-6">
+      I'm thinking of a number between 1 and 100. Can you guess it?
+    </p>
+
+    <!-- Game Container -->
+    <div id="gameContainer">
+      <!-- Input Section -->
+      <div class="mb-6">
+        <label for="guessInput" class="block text-sm font-medium text-gray-700 mb-2">Enter your guess:</label>
+        <div class="flex gap-2">
+          <input id="guessInput" min="1" max="100" placeholder="1-100"
+            class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all" />
+          <button id="submitBtn"
+            class="px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all transform hover:scale-105 hidden">
+            Guess!
+          </button>
+        </div>
+      </div>
+
+      <!-- Feedback Area -->
+      <div id="feedback" class="mb-6 p-4 rounded-lg text-center font-medium hidden">
+        <!-- Feedback messages will appear here -->
+      </div>
+
+      <!-- Attempts Counter -->
+      <div class="text-center mb-6">
+        <p class="text-gray-700">
+          Attempts remaining:
+          <span id="attemptsLeft" class="font-bold text-blue-600">10</span>
+        </p>
+      </div>
+
+      <!-- Previous Guesses -->
+      <div id="previousGuesses" class="mb-6 hidden">
+        <p class="text-sm text-gray-600 mb-2">Your previous guesses:</p>
+        <div id="guessList" class="flex flex-wrap gap-2">
+          <!-- Previous guesses will appear here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Over Section (hidden by default) -->
+    <div id="gameOverContainer" class="text-center hidden">
+      <div id="gameOverMessage" class="mb-6">
+        <!-- Game over message will appear here -->
+      </div>
+      <button id="resetBtn"
+        class="px-8 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-all transform hover:scale-105 active:bg-green-700 cursor-pointer">
+        🎮 Play Again
+      </button>
+      <button id="homeBtn"
+        class="px-8 py-3 bg-slate-500 text-white font-semibold rounded-lg hover:bg-slate-600 focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 transition-all transform hover:scale-105 active:bg-slate-700 cursor-pointer hidden"><a
+          href="../index.html">Home</a></button>
+    </div>
+  </div>
+
+  <!-- External JavaScript file -->
+  <script src="number-guessing-game.js"></script>
+</body>
+
+</html>

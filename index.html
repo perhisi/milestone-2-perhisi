@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>RevoFun</title>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-blue-200 min-h-screen">
+  <header class="fixed top-0 left-0 w-full z-50">
+    <nav class="bg-gray-900 text-white p-4 shadow-lg">
+      <div class="container hidden sm:flex gap-6 mx-auto flex justify-between items-center">
+        <span class="text-2xl font-bold tracking-wide text-blue-400">RevoFun</span>
+        <ul class="flex space-x-6">
+          <li><a href="#" class="hover:text-blue-400 transition">Home</a></li>
+          <li><a href="#about" class="hover:text-blue-400 transition">About</a></li>
+          <li><a href="#features" class="hover:text-blue-400 transition">Our Games</a></li>
+          <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
+        </ul>
+      </div>
+      <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none ml-2" aria-label="Open mobile menu">
+        &#9776;
+      </button>
+    </nav>
+  </header>
+
+  <nav id="mobile-menu"
+    class="mt-[4rem] pt-[4rem] hidden sm:hidden fixed top-0 left-0 w-full h-full bg-slate-900/80 dark:bg-emerald-950/95 z-50 gap-8 text-2xl font-semibold text-white backdrop-blur-md transition-all duration-300">
+    <div class="flex flex-col items-center justify-center gap-8">
+      <a href="#" class="hover:text-indigo-400 focus:text-indigo-400">Home</a>
+      <a href="#about" class="hover:text-indigo-400 focus:text-indigo-400">About</a>
+      <a href="#features" class="hover:text-indigo-400 focus:text-indigo-400">Our Games</a>
+      <a href="#contact" class="hover:text-indigo-400 focus:text-indigo-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section
+    class="relative flex flex-col items-center justify-center text-center py-20 bg-gradient-to-r from-blue-500 to-blue-700 text-white shadow-lg overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-700/40 to-blue-500/10 pointer-events-none"></div>
+    <h1 class="fade-in text-4xl md:text-6xl font-extrabold mt-18 mb-4 drop-shadow-lg relative z-10">Welcome to RevoFun!</h1>
+    <p class="fade-in text-lg md:text-2xl mb-8 max-w-2xl relative z-10" style="animation-delay:0.3s;">Play, learn, and have fun with our collection of interactive games.
+      Challenge yourself and friends!</p>
+    <a href="#features"
+      class="pulse bg-white text-blue-700 font-semibold px-8 py-3 rounded-full shadow hover:bg-blue-100 transition relative z-10">Explore
+      Games</a>
+  </section>
+
+  <main class="p-4 max-w-5xl mx-auto">
+    <section id="about" class="mb-12">
+      <h2 class="text-3xl font-semibold mt-16 mb-2 text-blue-700 text-center">About the Game</h2>
+      <p class="text-gray-700 text-center">Learn more about the story and gameplay. RevoFun brings you simple, fun, and challenging
+        games for all ages.</p>
+      <p class="text-gray-700 mt-4 text-center">Whether you're into guessing numbers, playing classic games like Rock-Paper-Scissors,
+        or testing your clicking speed, we've got something for everyone!</p>
+      <p class="text-gray-700 mt-4 text-center">Dive in and start playing today!</p>
+    </section>
+
+    <section id="features" class="mt-16 mb-12">
+      <h2 class="text-3xl font-semibold mb-6 text-blue-700 text-center">Game Features</h2>
+      <p class="text-gray-700 text-center mb-8">Discover the amazing features of our games!</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl hover:border-blue-400 border transition duration-300">
+          <a href="./src/number-guessing-game.html">
+            <h3 class="text-xl font-semibold mb-2 text-blue-600 group-hover:text-blue-800 transition">Number Guessing Game</h3>
+          </a>
+          <p class="text-gray-600">Guess the number! The game picks a number. You make a guess. Can you win?</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl hover:border-blue-400 border transition duration-300">
+          <a href="./src/rock-paper-scissors.html">
+            <h3 class="text-xl font-semibold mb-2 text-blue-600 group-hover:text-blue-800 transition">Rock, Paper, Scissors</h3>
+          </a>
+          <p class="text-gray-600">Play the classic Rock, Paper, Scissors game against the computer.</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl hover:border-blue-400 border transition duration-300">
+          <a href="src/clicker-game.html">
+            <h3 class="text-xl font-semibold mb-2 text-blue-600 group-hover:text-blue-800 transition">Clicker Game</h3>
+          </a>
+          <p class="text-gray-600">Test your speed! Click as fast as you can and beat your high score.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mt-16 mb-12">
+      <h2 class="text-3xl font-semibold mb-2 text-blue-700 text-center">Contact Us</h2>
+      <p class="text-gray-700 mb-4 text-center">Get in touch for more information or feedback.</p>
+      <form class="bg-white p-6 rounded-xl shadow-md max-w-md mx-auto">
+        <input type="text" placeholder="Your Name"
+          class="w-full mb-3 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <input type="email" placeholder="Your Email"
+          class="w-full mb-3 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <textarea placeholder="Your Message"
+          class="w-full mb-3 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+        <button type="submit"
+          class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-blue-700 text-white p-4 text-center shadow-inner">
+    <p>&copy; 2025 Game Landing Page RevoFun. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
