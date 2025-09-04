@@ -2,26 +2,46 @@
 .fade-in {
   animation: fadeIn 1.2s ease-in;
 }
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px);}
-  to { opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 /* Button pulse animation */
 .pulse {
   animation: pulse 2s infinite;
 }
+
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(59,130,246,0.5);}
-  70% { box-shadow: 0 0 0 10px rgba(59,130,246,0);}
-  100% { box-shadow: 0 0 0 0 rgba(59,130,246,0);}
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
 }
+
 /* Feature card hover effect */
 .feature-card {
   transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
   border: 2px solid transparent;
 }
+
 .feature-card:hover {
-  box-shadow: 0 8px 32px rgba(59,130,246,0.15), 0 1.5px 6px rgba(59,130,246,0.10);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15), 0 1.5px 6px rgba(59, 130, 246, 0.10);
   border-color: #60a5fa;
   transform: scale(1.05);
 }
